@@ -24,7 +24,7 @@ class Minigame::BMFont
   def self.load(filepath)
     fnt = Minigame::BMFont.new
 
-    open(filepath) { |file|
+    File.open(filepath) { |file|
       while line = file.gets
         if m = @@re_char.match(line)
           c = @@BMFontChar.new
