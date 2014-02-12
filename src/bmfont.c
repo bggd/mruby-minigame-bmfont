@@ -31,7 +31,7 @@ mrb_mruby_minigame_bmfont_gem_init(mrb_state *mrb)
 {
   struct RClass *c;
   
-  c = mrb_define_class_under(mrb, mrb_class_get(mrb, "Minigame"), "BMFont", mrb->object_class);
+  c = mrb_define_class_under(mrb, mrb_module_get(mrb, "Minigame"), "BMFont", mrb->object_class);
   MRB_SET_INSTANCE_TT(c, MRB_TT_DATA);
 
   mrb_define_method(mrb, c, "each_codepoint_from", bmfont_each_codepoint_from, MRB_ARGS_REQ(2));
